@@ -1,4 +1,8 @@
 board = list(range(1, 10))
+board = [tuple(board[x:x+3]) for x in range(0, len(board), 3)]
+winner = False
+move = 0
+
 def DisplayBoard(board):
 #
 # the function accepts one parameter containing the board's current status
@@ -32,7 +36,33 @@ def VictoryFor(board, sign):
 # the player using 'O's or 'X's has won the game
 #
 
+for val1 in range (3) :
+    if board[val1][0] == board[val1][1] == board[val1][2] :
+        winner = True
+        who = board[val1][0]
+    elif board[0][val1] == board[1][val1] == board[2][val1] :
+        winner = True
+        who = board[0][val1]
+    elif board[0][0] == board[1][1] == board[2][2] :
+        winner = True
+        who = board[0][0]
+    elif board[0][2] == board[1][1] == board[2][0]
+        winner = True
+        who = board[0][2]
+
+if winner == True :
+    print (who, "is the winner!")
+
+
 def DrawMove(board):
 #
 # the function draws the computer's move and updates the board
 #
+free = []
+if board[1][1] != "X" :
+    board[1][1] = "X"
+else : 
+
+ 
+
+
